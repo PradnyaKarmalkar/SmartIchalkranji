@@ -316,7 +316,7 @@ nav {
         /* News Section */
 
 
-        .instagram-notice {
+        /* .instagram-notice {
     text-align: center;
     background: linear-gradient(135deg, #f3e8ff, #fed7aa);
     padding: 20px;
@@ -412,7 +412,7 @@ nav {
 
         .read-more:hover {
             color: #7c3aed;
-        }
+        } */
 
         /* Gallery Section */
 #gallery {
@@ -942,3 +942,77 @@ textarea {
     color: #333;
     font-weight: 500;
 }
+
+
+/* ===== News Owl Carousel ===== */
+
+.news-carousel .instagram-embed-wrapper {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    /* padding: 20px; */
+    max-height: 420px; 
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    justify-content: flex-start;   /* <-- IMPORTANT: align left */
+    align-items: flex-start;      /* <-- IMPORTANT: align top */
+    padding: 0;                  /* remove padding to avoid shifting */
+    height: 420px;
+}
+
+.news-carousel iframe,
+.news-carousel blockquote {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Nav Arrows */
+.news-carousel .owl-nav button {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5) !important;
+    color: #fff !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-carousel .owl-nav button.owl-prev {
+    left: 0;
+}
+
+.news-carousel .owl-nav button.owl-next {
+    right: 0;
+}
+
+/* Dots */
+.news-carousel .owl-dots {
+    margin-top: 15px;
+}
+
+.news-carousel .owl-dots .owl-dot span {
+    width: 12px;
+    height: 12px;
+    background: #bbb !important;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.news-carousel .owl-dots .owl-dot.active span {
+    background: #333 !important;
+    transform: scale(1.3);
+}
+
+/* Force Instagram embed to stay inside the card */
+.news-carousel .instagram-media {
+    max-height: 100% !important;
+    overflow: hidden !important;
+}
+.news-carousel iframe {
+    max-height: 100% !important;}
